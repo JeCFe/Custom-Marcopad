@@ -84,7 +84,7 @@ def FunctionManager(functionReg):
         if(mode == 0):
             BCC.MediaControlButtons(ConsumerControlCode.PLAY_PAUSE, functionReg, 0, switches)
         else:
-            DCS.PushToTalk()
+            DCS.PushToTalk(functionReg, switches)
          
     if functionReg == 5: #Middle Right
         if(mode == 0):
