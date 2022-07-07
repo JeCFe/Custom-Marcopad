@@ -41,7 +41,7 @@
             this.txtVisPadDisplay = new System.Windows.Forms.TextBox();
             this.txtButtonName = new System.Windows.Forms.TextBox();
             this.lblNewButtonName = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxButtonOptions = new System.Windows.Forms.ListBox();
             this.btnNewLayer = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
@@ -56,6 +56,8 @@
             this.btnSetButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoadConfig = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -193,21 +195,21 @@
             this.lblNewButtonName.TabIndex = 6;
             this.lblNewButtonName.Text = "Enter new button name";
             // 
-            // listBox1
+            // lbxButtonOptions
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lbxButtonOptions.FormattingEnabled = true;
+            this.lbxButtonOptions.Items.AddRange(new object[] {
             "Play/Pause",
             "Next Track",
             "Previous Track",
             "Volume Mute",
             "Volume Up",
             "Volume Down"});
-            this.listBox1.Location = new System.Drawing.Point(5, 171);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 43);
-            this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbxButtonOptions.Location = new System.Drawing.Point(5, 171);
+            this.lbxButtonOptions.Name = "lbxButtonOptions";
+            this.lbxButtonOptions.Size = new System.Drawing.Size(120, 43);
+            this.lbxButtonOptions.TabIndex = 7;
+            this.lbxButtonOptions.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnNewLayer
             // 
@@ -328,7 +330,7 @@
             this.groupBox2.Controls.Add(this.lblSelectedButtonOperation);
             this.groupBox2.Controls.Add(this.lblNewButtonCommand);
             this.groupBox2.Controls.Add(this.lblNewButtonName);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.lbxButtonOptions);
             this.groupBox2.Controls.Add(this.txtButtonName);
             this.groupBox2.Location = new System.Drawing.Point(225, 12);
             this.groupBox2.Name = "groupBox2";
@@ -345,12 +347,35 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Clear Selection";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(275, 385);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 22;
+            this.btnSave.Text = "Save Config";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnLoadConfig
+            // 
+            this.btnLoadConfig.Location = new System.Drawing.Point(275, 415);
+            this.btnLoadConfig.Name = "btnLoadConfig";
+            this.btnLoadConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadConfig.TabIndex = 23;
+            this.btnLoadConfig.Text = "Load Config";
+            this.btnLoadConfig.UseVisualStyleBackColor = true;
+            this.btnLoadConfig.Click += new System.EventHandler(this.btnLoadConfig_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 450);
+            this.Controls.Add(this.btnLoadConfig);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSetLayername);
             this.Controls.Add(this.label3);
@@ -385,7 +410,7 @@
         private System.Windows.Forms.TextBox txtVisPadDisplay;
         private System.Windows.Forms.TextBox txtButtonName;
         private System.Windows.Forms.Label lblNewButtonName;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxButtonOptions;
         private System.Windows.Forms.Button btnNewLayer;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
@@ -400,6 +425,8 @@
         private System.Windows.Forms.Button btnSetButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoadConfig;
     }
 }
 
